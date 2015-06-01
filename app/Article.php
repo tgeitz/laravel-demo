@@ -35,6 +35,9 @@ class Article extends Model {
 
     }
 
+    /**
+     * Article belongs to a user.
+     */
     public function user()
     {
 
