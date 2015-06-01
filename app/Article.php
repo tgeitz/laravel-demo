@@ -35,4 +35,11 @@ class Article extends Model {
 
     }
 
+    public function user()
+    {
+
+        $this->belongsTo('App\User');
+
+    }
+
 }
