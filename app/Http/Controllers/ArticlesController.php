@@ -49,6 +49,8 @@ class ArticlesController extends Controller {
 
         Auth::user()->articles()->save($article);
 
+        \Session::flash('flash_message', 'Your article has been created!');
+
         return redirect('articles');
 
     }
@@ -62,9 +64,11 @@ class ArticlesController extends Controller {
 
     public function update(Article $article, ArticleRequest $request)
     {
-        
+
 
         $article->update($request->all());
+
+        \Session::flash('flash_message', 'Your article has been updated!');
 
         return redirect('articles');
 
