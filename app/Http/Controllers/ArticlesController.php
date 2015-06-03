@@ -67,6 +67,7 @@ class ArticlesController extends Controller {
      */
     public function store(ArticleRequest $request)
     {
+        $this->createArticle($request);
 
         \Session::flash('flash_message', 'Your article has been created!');
 
