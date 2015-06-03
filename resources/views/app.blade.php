@@ -12,6 +12,7 @@
 
     <div class="container">
         @include('partials.flash')
+        @include('partials.navigationbar')
 
         @yield('content')
     </div>
